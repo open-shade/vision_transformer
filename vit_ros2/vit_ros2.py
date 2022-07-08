@@ -12,7 +12,7 @@ from cv_bridge import CvBridge
 ALGO_VERSION = os.getenv("MODEL_NAME")
 
 if not ALGO_VERSION:
-    ALGO_VERSION = 'vit-base-patch16-224'
+    ALGO_VERSION = 'google/vit-base-patch16-224'
 
 
 def predict(image: Image):
