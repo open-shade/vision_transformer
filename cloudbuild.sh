@@ -1,7 +1,8 @@
 declare -a ROS_VERSIONS=( "foxy" "galactic" "humble" "rolling" )
 
-ORGANIZATION="microsoft"
-declare -a MODEL_VERSIONS=( "<model versions here" )
+ORGANIZATION="google"
+declare -a MODEL_VERSIONS=( "vit-base-patch16-224" "vit-base-patch16-384" "vit-base-patch32-384" "vit-large-patch16-224" "vit-large-patch16-384" )
+
 
 for VERSION in "${ROS_VERSIONS[@]}"
 do
