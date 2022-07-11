@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'vit_ros2'
+package_name = 'vit'
 
 setup(
     name=package_name,
@@ -31,7 +31,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'vit_ros2 = vit_ros2.vit_ros2:main'
+            'vit = vit.vit:main'
         ],
     },
 )
