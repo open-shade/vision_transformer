@@ -14,7 +14,7 @@ Vision Transformer (ViT) is the first of its kind using transformers used in NLP
 ## Build Docker Image Natively
 1. Install [Docker](https://www.docker.com/) and ensure the Docker daemon is running in the background.
 2. Clone this repo with ```git pull -b ${ROS2_DISTRO} https://github.com/open-shade/vision-transformer.git```
-3. Enter the repo with ```cd deit```
+3. Enter the repo with ```cd vit```
 4. To pick a specific model version, edit the `ALGO_VERSION` constant in `/vit/vit.py`
 5. Build the container with ```docker build . -t [name]```. This will take a while. We have also provided associated `cloudbuild.sh` scripts to build on GCP all of the associated versions.
 6. Follow the run commands in the usage section below.
