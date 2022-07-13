@@ -37,7 +37,7 @@ docker pull shaderobotics/vision-transformer:foxy-base-patch16-224
 
 # Usage
 ## Run the ViT Node 
-Run ```docker run -t [name]```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes.
+Run ```docker run -t --net=host shaderobotics/vit:${ROS_DISTRO}-${MODEL_VERSION}```. Your node should be running now. Then, by running ```ros2 topic list,``` you should see all the possible pub and sub routes.
 
 For more details explaining how to run Docker images, visit the official Docker documentation [here](https://docs.docker.com/engine/reference/run/). Also, additional information as to how ROS2 communicates between external environment or multiple docker containers, visit the official ROS2 (foxy) docs [here](https://docs.ros.org/en/foxy/How-To-Guides/Run-2-nodes-in-single-or-separate-docker-containers.html#). 
 
@@ -51,4 +51,4 @@ For more details explaining how to run Docker images, visit the official Docker 
 # Testing / Demo
 To test and ensure that this package is properly installed, replace the Dockerfile in the root of this repo with what exists in the demo folder. Installed in the demo image contains a [camera stream emulator](https://github.com/klintan/ros2_video_streamer) by [klintan](https://github.com/klintan) which directly pubs images to the ViT node and processes it for you to observe the outputs.
 
-To run this, run ```docker build . -t [name]```, then ```docker run -t [name]```. Observing the logs for this will show you what is occuring within the container. If you wish to enter the running container and preform other activities, run ```docker ps```, find the id of the running container, then run ```docker exec -it [containerId] /bin/bash```
+To run this, run ```docker build . -t [name]```, then ```docker run -t --net=host [name]```. Observing the logs for this will show you what is occuring within the container. If you wish to enter the running container and preform other activities, run ```docker ps```, find the id of the running container, then run ```docker exec -it [containerId] /bin/bash```
